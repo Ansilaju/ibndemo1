@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>BAMBINOZ – The Perfect Baby Shop</title>
+    <meta
+      name="description"
+      content="Bambinoz – Making Parenting a Stylish Adventure since 1973. Discover our trusted services, best-sellers and get in touch!"
+    />
+
+    <!-- Poppins for additional typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ====================== NAVBAR ====================== -->
+    <header class="navbar" id="navbar">
+      <div class="container nav__inner">
+        <a href="#overview" class="nav__logo">Bambinoz</a>
+
+        <nav class="nav__links" id="nav-links">
+          <a href="#overview" class="nav__link active">Overview</a>
+          <a href="#services" class="nav__link">Services</a>
+          <a href="#highlights" class="nav__link">Highlights</a>
+          <a href="#about" class="nav__link">About</a>
+          <a href="#contact" class="nav__link">Contact</a>
+        </nav>
+
+        <button
+          id="hamburger"
+          class="hamburger"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ====================== HERO / COMPANY OVERVIEW ====================== -->
+    <section id="overview" class="section hero flex flex-col items-center justify-center">
+      <div class="hero__content reveal flex flex-col items-center gap-8">
+        <h1 class="hero__title">BAMBINOZ</h1>
+        <p class="hero__tagline">The Perfect Baby Shop</p>
+        <p class="hero__subtitle">Est. 1973 • Rated 4.7★ • 50+ Years of Trust</p>
+        <div class="flex gap-8">
+          <a href="#services" class="btn btn--primary hero__cta">Our Services</a>
+          <a href="#contact" class="btn btn--secondary hero__cta">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== SERVICES ====================== -->
+    <section id="services" class="section services container reveal">
+      <h2 class="section__heading">Our Services</h2>
+      <div id="services-grid" class="services__grid"></div>
+    </section>
+
+    <!-- ====================== BEST SELLERS ====================== -->
+    <section id="highlights" class="section highlights reveal">
+      <h2 class="section__heading container">Best Sellers</h2>
+      <div class="carousel" id="highlight-carousel">
+        <button class="carousel__btn prev" aria-label="Previous product">&#10094;</button>
+        <div class="carousel__track" id="carousel-track"></div>
+        <button class="carousel__btn next" aria-label="Next product">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- ====================== ABOUT US ====================== -->
+    <section id="about" class="section about container reveal">
+      <div class="about__inner flex flex-col gap-16">
+        <div class="about__text" id="about-text"></div>
+      </div>
+    </section>
+
+    <!-- ====================== CONTACT US ====================== -->
+    <section id="contact" class="section contact container reveal">
+      <h2 class="section__heading">Contact Us</h2>
+
+      <form id="contact-form" class="contact__form flex flex-col gap-16" novalidate>
+        <div class="form-group">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" id="name" name="name" class="form-control" required />
+        </div>
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" name="email" class="form-control" required />
+        </div>
+        <div class="form-group">
+          <label for="phone" class="form-label">Phone</label>
+          <input type="tel" id="phone" name="phone" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+        <p id="form-status" class="status status--info hidden">Sending…</p>
+      </form>
+
+      <div class="contact__details flex flex-col gap-8 mt-8">
+        <address>
+          <strong>Bambinoz Baby Shop</strong><br />
+          Manacaud, Thiruvananthapuram, Kerala, India
+        </address>
+        <p>Phone: +91-XXXX-XXXXXX</p>
+        <p>Email: info@bambinoz.com</p>
+        <p>Hours: Mon–Sat 9:00 AM – 8:00 PM, Sun 10:00 AM – 6:00 PM</p>
+      </div>
+
+      <div class="map-placeholder mt-8">
+        <p>Google Maps view will appear here.</p>
+      </div>
+    </section>
+
+    <!-- ====================== FOOTER ====================== -->
+    <footer class="footer py-16">
+      <div class="container flex flex-col items-center gap-8">
+        <p>&copy; 2025 Bambinoz – The Perfect Baby Shop. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
